@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1__Numero_par_o_impar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0, opcion = 0; //Declaramos las 2 variables que vamos a utilizar
+
+            for (int i = 1; i < 2; i++) //Utilizamos el ciclo que nos permitira repetir la aplicacion todas las veces que deseemos sin salir del programa
+            {
+                Console.Write("Escribe un número: ");
+                num = int.Parse(Console.ReadLine());
+
+                if (num % 2 == 0) //Analiza si el número ingresado deja residuos, si el residuo es 0 entonces es par
+                {
+                    Console.WriteLine("El número {0} es par \n",num); //La barra n da un salto de línea
+                }
+                else //Si la proposición de arriba es falsa se ejecuta esta linea
+                {
+                    Console.WriteLine("El número {0} es impar \n",num);
+                }
+
+                Console.WriteLine("¿Desea ingresar otro número? \n" + "SI - Presione 1 \n" + "NO - Presione 2");//Estas opciones son para que el usuario eliga si quiere repetir
+                opcion = int.Parse(Console.ReadLine());
+
+                if (opcion == 1)
+                {
+                    i = 0; //El contador del ciclo se convierte en 0
+                }
+
+                Console.Clear(); //Limpia la consola
+            }
+
+            Console.WriteLine("Ha finalizado la aplicación"); //Esta linea se ejecuta unicamente al salir del ciclo
+
+            Console.ReadLine();
+        }
+    }
+}
